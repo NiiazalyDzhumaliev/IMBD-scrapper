@@ -5,9 +5,9 @@ require_relative '../lib/validator.rb'
 require_relative '../lib/search_engine.rb'
 
 search_object = SearchEngine.new
-validation = Validator.new
+# validation = Validator.new
 
-puts search_object.title_search(1)
+puts search_object.title_search(150)
 
 # puts '-----WELCOME------'
 # puts 'Here you can find a film from TOP 250 IMBD ranking'
