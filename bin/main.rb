@@ -1,6 +1,17 @@
 require 'nokogiri'
 require 'httparty'
 require 'byebug'
+require_relative '../lib/validator.rb'
+require_relative '../lib/search_engine.rb'
+
+search_object = SearchEngine.new
+byebug
+search_object.place_search('The Shawshank Redemption')
+
+
+
+
+
 
 # puts '                                     -----WELCOME------'
 # puts 'Here you can find a film from TOP 250 IMBD ranking'
@@ -19,21 +30,4 @@ require 'byebug'
 #   search_type = gets.chomp
 # end
 
-def scraper
-  url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
-  unparsed_page = HTTParty.get(url)
-  parsed_page = Nokogiri::HTML(unparsed_page.body)
-  jobs = []
-  job_listings = parsed_page.css('td.titleColumn')
-  count = 0
-  job_listings.each do |job_listings|
-    job = {
-      title: job_listings.css('a').text,
-      place: count += 1
-    }
-    jobs << job
-  end
-  # byebug
-end
 
-scraper

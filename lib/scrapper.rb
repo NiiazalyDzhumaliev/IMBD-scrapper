@@ -1,6 +1,3 @@
-require 'nokogiri'
-require 'httparty'
-require 'byebug'
 
 class Scrapper
   def parsing_page
@@ -24,5 +21,5 @@ class Scrapper
   end
 end
 
-new_object = Scrapper.new
-new_object.hash_creator
+# new_object = Scrapper.new
+# new_object.hash_creator

@@ -1,5 +1,4 @@
 require_relative '../lib/scrapper.rb'
-
 class SearchEngine < Scrapper
   def capitalize_words(words)
     words.split.map(&:capitalize).join(' ')
@@ -23,6 +22,6 @@ class SearchEngine < Scrapper
   end
 end
 
-object1 = SearchEngine.new
-puts object1.place_search('The Shawshank Redemption')
+# object1 = SearchEngine.new
+# puts object1.place_search('The Shawshank Redemption')
 # hash_creator[0][:place] == 1 => hash_creator[0][:title]

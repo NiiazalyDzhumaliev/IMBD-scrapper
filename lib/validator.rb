@@ -1,6 +1,6 @@
 class Validator
   def search_type_validator(command)
-    command == '1' || command == '2' ? true : false
+    command.include?('1') || command.include?('2') ? true : false
   end
 
   def place_validator(place)
