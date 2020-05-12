@@ -10,4 +10,8 @@ class Validator
   def empty_validator(title)
     title.empty? ? true : false
   end
+
+  def choice_validator(choice)
+     choice == '1' ? true : false
+  end
 end
