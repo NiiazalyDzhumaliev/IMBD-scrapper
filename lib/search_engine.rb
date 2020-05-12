@@ -4,7 +4,7 @@ class SearchEngine < Scrapper
    def place_search(place)   
       result = String.new
       hash_creator.each do |item|
-        result << item[:title] if item[:place] == place
+        result = item[:title] if item[:place] == place
       end
       result
    end
