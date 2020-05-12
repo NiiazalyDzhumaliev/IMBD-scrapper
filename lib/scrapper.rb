@@ -15,14 +15,15 @@ class Scrapper
     place_count = 0
     parsing_page.each do |movie_listing|
       movie = {
-        title: movie_listing.css('a').text.downcase,
+        title: movie_listing.css('a').text,
         place: place_count += 1
       }
       movies_with_places << movie
     end
     movies_with_places
-  end
+  end 
 end
 
 new_object = Scrapper.new
-print new_object.hash_creator
+new_object.hash_creator
+
