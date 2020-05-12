@@ -33,7 +33,7 @@ def scraper
     }
     jobs << job
   end
-  byebug
+  # byebug
 end
 
 scraper
