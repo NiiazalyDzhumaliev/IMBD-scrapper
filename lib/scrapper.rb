@@ -1,4 +1,3 @@
-
 class Scrapper
   def parsing_page
     url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'

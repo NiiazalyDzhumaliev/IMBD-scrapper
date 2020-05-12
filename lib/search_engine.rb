@@ -23,5 +23,5 @@ class SearchEngine < Scrapper
 end
 
 # object1 = SearchEngine.new
-# puts object1.place_search('The Shawshank Redemption')
+# puts object1.place_search('The Dark Knight')
 # hash_creator[0][:place] == 1 => hash_creator[0][:title]

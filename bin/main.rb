@@ -5,22 +5,20 @@ require_relative '../lib/validator.rb'
 require_relative '../lib/search_engine.rb'
 
 search_object = SearchEngine.new
-validation_object = Validator.new
+validation = Validator.new
 
+puts search_object.title_search(1)
 
-puts '-----WELCOME------'
-puts 'Here you can find a film from TOP 250 IMBD ranking'
-puts ''
-puts 'You can find it either by TITLE or by PLACE in a ranking'
-puts ''
-print 'Choose ---1--- if you want to search by TITLE and ---2--- for searching by PLACE:  '
+# puts '-----WELCOME------'
+# puts 'Here you can find a film from TOP 250 IMBD ranking'
+# puts ''
+# puts 'You can find it either by TITLE or by PLACE in a ranking'
+# puts ''
+# print 'Choose ---1--- if you want to search by TITLE and ---2--- for searching by PLACE:  '
 
-search_type = gets.chomp
+# search_type = gets.chomp
 
-until validation_object.search_type_validator(search_type)
-    print 'Please, choose ---1--- or ---2--- :  '
-    search_type = gets.chomp
-end
-
-
-
+# until validation.search_type_validator(search_type)
+#     print 'Please, choose ---1--- or ---2--- :  '
+#     search_type = gets.chomp
+# end
