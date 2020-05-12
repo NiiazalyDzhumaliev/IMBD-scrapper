@@ -20,19 +20,18 @@ require 'byebug'
 # end
 
 def scraper
-  url = "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+  url = 'https://www.imdb.com/chart/top/?ref_=nv_mv_250'
   unparsed_page = HTTParty.get(url)
   parsed_page = Nokogiri::HTML(unparsed_page.body)
-  jobs = Array.new
+  jobs = []
   job_listings = parsed_page.css('td.titleColumn')
   count = 0
   job_listings.each do |job_listings|
-      job = {
-        title: job_listings.css('a').text,
-        place: count += 1
-      }
-      jobs << job
-
+    job = {
+      title: job_listings.css('a').text,
+      place: count += 1
+    }
+    jobs << job
   end
   byebug
 end
