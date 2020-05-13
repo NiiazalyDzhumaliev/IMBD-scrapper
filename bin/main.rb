@@ -32,6 +32,10 @@ if validator.choice_validator(search_type)
 else
   print 'Please, type a title of movie in IMBD ranking: '
   title_of_choice = gets.chomp
+  while validator.empty_validator(title_of_choice)
+    print 'Please, type a title:  '
+    title_of_choice = gets.chomp
+  end
   title_of_choice = search_engine.capitalize_words(title_of_choice)
   puts search_engine.place_search(title_of_choice)
 end
