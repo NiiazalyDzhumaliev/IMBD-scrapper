@@ -12,30 +12,44 @@ puts 'Here you can find a film from TOP 250 IMBD ranking'
 puts ''
 puts 'You can do it either by TITLE or by PLACE in a ranking'
 puts ''
-print 'Choose ---1--- if you want to search by PLACE and ---2--- for searching by TITLE:  '
 
-search_type = gets.chomp
+program_on = true
+while program_on
+  print 'Choose ---1--- if you want to search by PLACE and ---2--- for searching by TITLE:  '
 
-until validator.search_type_validator(search_type)
-  print 'Please, choose ---1--- or ---2--- :  '
   search_type = gets.chomp
+
+  until validator.search_type_validator(search_type)
+    print 'Please, choose ---1--- or ---2--- :  '
+    search_type = gets.chomp
+  end
+  if validator.choice_validator(search_type)
+    print 'Please, type a place of movie in IMBD ranking: '
+    place_of_choice = gets.chomp.to_i
+    until validator.place_validator(place_of_choice)
+      print 'Please, choose from ---1--- to ---250--- :  '
+      place_of_choice = gets.chomp.to_i
+    end
+    puts search_engine.title_search(place_of_choice)
+  else
+    print 'Please, type a title of movie in IMBD ranking: '
+    title_of_choice = gets.chomp
+    while validator.empty_validator(title_of_choice)
+      print 'Please, type a title:  '
+      title_of_choice = gets.chomp
+    end
+    title_of_choice = search_engine.capitalize_words(title_of_choice)
+    puts search_engine.place_search(title_of_choice)
+  end
+
+  print 'Do you want to continue? (Y/N): '
+  yes_no = gets.chomp.downcase
+  until validator.yes_no_validator(yes_no)
+    print 'Y/N?: '
+    yes_no = gets.chomp.downcase
+  end
+
+  program_on = yes_no == 'y'
 end
 
-if validator.choice_validator(search_type)
-  print 'Please, type a place of movie in IMBD ranking: '
-  place_of_choice = gets.chomp.to_i
-  until validator.place_validator(place_of_choice)
-    print 'Please, choose from ---1--- to ---250--- :  '
-    place_of_choice = gets.chomp.to_i
-  end
-  puts search_engine.title_search(place_of_choice)
-else
-  print 'Please, type a title of movie in IMBD ranking: '
-  title_of_choice = gets.chomp
-  while validator.empty_validator(title_of_choice)
-    print 'Please, type a title:  '
-    title_of_choice = gets.chomp
-  end
-  title_of_choice = search_engine.capitalize_words(title_of_choice)
-  puts search_engine.place_search(title_of_choice)
-end
+puts 'Thank you for checking. '

@@ -14,4 +14,8 @@ class Validator
   def choice_validator(choice)
     choice == '1'
   end
+
+  def yes_no_validator(answer)
+    answer.eql?('y') || answer.eql?('n') ? true : false
+  end
 end

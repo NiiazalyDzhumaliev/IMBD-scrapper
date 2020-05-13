@@ -19,6 +19,3 @@ class Scrapper
     movies_with_places
   end
 end
-
-# new_object = Scrapper.new
-# new_object.hash_creator
