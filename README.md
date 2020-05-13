@@ -16,7 +16,7 @@
 * [Author](#author)
 * [License](#license)
 
-## How program runs.
+## How program runs
 * Welcome message
 * The program gives a choice to user to search by PLACE (type '1') or by TITLE (type '2')
 * If user choose by PLACE, he/she should type number from 1 to 250, after user will see a movie title
