@@ -82,7 +82,7 @@ A special thanks for the code reviewers and [IMBD website](https://www.imdb.com/
 
 ## Author
 
-👤 **Niiazaly**
+👤 **Niiazaly Dzhumaliev**
 
 - Github: (https://github.com/NiiazalyDzhumaliev)
 - Linkedin:(https://www.linkedin.com/in/niiazaly-dzhumaliev-117707132/)
