@@ -1,7 +1,7 @@
 # Web Scrapper
 > A web scrapper project from IMDB.com TOP250 rated movies
 
-![screenshot](img/screenshot_tic_tac_toe.png)
+![screenshot](img/screenshot_1.png)
 
 <br>The aim of the project is to scrap data from IMBD website and give to user an opportunity to search movie by place in the ranking or by title instead of looking for manually<br>
 
