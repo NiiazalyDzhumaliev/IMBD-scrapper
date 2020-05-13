@@ -24,6 +24,10 @@ end
 if validator.choice_validator(search_type)
   print 'Please, type a place of movie in IMBD ranking: '
   place_of_choice = gets.chomp.to_i
+  until validator.place_validator(place_of_choice)
+    print 'Please, choose from ---1--- to ---250--- :  '
+    place_of_choice = gets.chomp.to_i
+  end
   puts search_engine.title_search(place_of_choice)
 else
   print 'Please, type a title of movie in IMBD ranking: '

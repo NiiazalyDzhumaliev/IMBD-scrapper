@@ -4,7 +4,7 @@ class Validator
   end
 
   def place_validator(place)
-    (1..250) == place
+    place.between?(1, 250) ? true : false
   end
 
   def empty_validator(title)
