@@ -45,4 +45,18 @@ describe Validator do
       expect(validator.choice_validator('2')).to eql(false)
     end
   end
+
+  context "#yes_no_validator" do
+    it "returns true if the value equal to 'y'" do
+      expect(validator.yes_no_validator('y')).to eql(true)
+    end
+
+    it "returns true if the value equal to 'n'" do
+      expect(validator.yes_no_validator('n')).to eql(true)
+    end
+
+    it "returns false if the value other than 'y' or 'n'" do
+      expect(validator.yes_no_validator('o')).to eql(false)
+    end
+  end
 end
