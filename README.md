@@ -29,6 +29,7 @@
   <h3>Features</h3>
   <li>Scrap information from any website</li>
   <li>Use Nokogiri.gem</li>
+  <li>Use OOP principles</li>
 </ul>
 
 ### Built With
