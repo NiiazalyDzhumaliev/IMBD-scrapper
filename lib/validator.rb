@@ -12,6 +12,6 @@ class Validator
   end
 
   def choice_validator(choice)
-    choice == '1' ? true : false
+    choice == '1'
   end
 end
