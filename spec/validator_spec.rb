@@ -35,4 +35,14 @@ describe Validator do
       expect(validator.empty_validator('hello')).to eql(false)
     end
   end
+
+  context "#choice_validator" do
+    it "returns true if the value is equal to '1'" do
+      expect(validator.choice_validator('1')).to eql(true)
+    end
+
+    it "returns false if the value other than '1'" do
+      expect(validator.choice_validator('2')).to eql(false)
+    end
+  end
 end
