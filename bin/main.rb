@@ -8,6 +8,7 @@ search_engine = SearchEngine.new
 validator = Validator.new
 
 puts '                            -----WELCOME------'
+puts ''
 puts 'Here you can find a film from TOP 250 IMBD ranking'
 puts ''
 puts 'You can do it either by TITLE or by PLACE in a ranking'

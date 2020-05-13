@@ -18,6 +18,6 @@ class SearchEngine < Scrapper
       item[:title] = capitalize_words(item[:title])
       result = item[:place] if item[:title] == movie
     end
-    result
+    result == '' ? 'I can not find the movie.' : result
   end
 end
