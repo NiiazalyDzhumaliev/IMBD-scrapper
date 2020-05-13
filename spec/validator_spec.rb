@@ -25,4 +25,14 @@ describe Validator do
       expect(validator.place_validator(300)).to eql(false)
     end
   end
+
+  context "#empty_validator" do
+    it "returns true if string is empty" do
+      expect(validator.empty_validator('')).to eql(true)
+    end
+
+    it "returns false if string is not empty" do
+      expect(validator.empty_validator('hello')).to eql(false)
+    end
+  end
 end
