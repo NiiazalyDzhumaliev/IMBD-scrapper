@@ -52,6 +52,10 @@ describe Validator do
     it "returns false if the value other than '1'" do
       expect(validator.choice_validator('2')).to eql(false)
     end
+
+    it "returns false if the string is empty" do
+      expect(validator.choice_validator('')).to eql(false)
+    end
   end
 
   context '#yes_no_validator' do
@@ -65,6 +69,10 @@ describe Validator do
 
     it "returns false if the value other than 'y' or 'n'" do
       expect(validator.yes_no_validator('o')).to eql(false)
+    end
+
+    it "returns false if the string is empty" do
+      expect(validator.yes_no_validator('')).to eql(false)
     end
   end
 end
