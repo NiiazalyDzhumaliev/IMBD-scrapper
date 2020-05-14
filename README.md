@@ -3,7 +3,7 @@
 
 ![screenshot](img/Screenshot_scrapper.png)
 
-<br>The aim of the project is to scrap data from IMBD website and give to user an opportunity to search movie by place in the ranking or by title instead of looking for manually<br>
+<br>The project aims to scrap data from IMBD website and give to user an opportunity to search movie by place in the ranking or by title instead of looking for manually<br>
 
 ## Content
 
@@ -18,10 +18,10 @@
 
 ## How program runs
 * Welcome message
-* The program gives a choice to user to search by PLACE (type '1') or by TITLE (type '2')
-* If user choose by PLACE, he/she should type number from 1 to 250, after user will see a movie title
-* If user choose by TITLE, he/she should type a title of movie, after user will see a movie's place in the ranking
-* After that you can choose to continue searching ('Y') or to stop the program ('N')
+* The program gives a choice to the user to search by PLACE (type '1') or by TITLE (type '2')
+* If the user chooses by PLACE, he/she should type number from 1 to 250, after the user will see a movie title
+* If the user chooses by TITLE, he/she should type a title of a movie, after user will see a movie's place in the ranking
+* After that, you can choose to continue searching ('Y') or to stop the program ('N')
 
 ## Requirements
 
