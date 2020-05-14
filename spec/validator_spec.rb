@@ -15,7 +15,7 @@ describe Validator do
       expect(validator.search_type_validator('9')).to eql(false)
     end
 
-    it "returns false if empty string" do
+    it 'returns false if empty string' do
       expect(validator.search_type_validator('')).to eql(false)
     end
   end
@@ -53,7 +53,7 @@ describe Validator do
       expect(validator.choice_validator('2')).to eql(false)
     end
 
-    it "returns false if the string is empty" do
+    it 'returns false if the string is empty' do
       expect(validator.choice_validator('')).to eql(false)
     end
   end
@@ -71,7 +71,7 @@ describe Validator do
       expect(validator.yes_no_validator('o')).to eql(false)
     end
 
-    it "returns false if the string is empty" do
+    it 'returns false if the string is empty' do
       expect(validator.yes_no_validator('')).to eql(false)
     end
   end
