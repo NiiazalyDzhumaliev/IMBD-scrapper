@@ -14,6 +14,10 @@ describe Validator do
     it "returns false if not '1' or '2' are given" do
       expect(validator.search_type_validator('9')).to eql(false)
     end
+
+    it "returns false if empty string" do
+      expect(validator.search_type_validator('')).to eql(false)
+    end
   end
 
   context '#place_validator' do
