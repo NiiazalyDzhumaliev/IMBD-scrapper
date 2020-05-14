@@ -9,6 +9,10 @@ describe SearchEngine do
     it 'returns capitalized words' do
       expect(search_engine.capitalize_words('hello world')).to eql('Hello World')
     end
+
+    it 'returns empty string if empty string is given' do
+      expect(search_engine.capitalize_words('')).to eql('')
+    end
   end
 
   context '#title_search' do
