@@ -28,6 +28,10 @@ describe Validator do
     it 'returns false if the number is not in (1..250) range' do
       expect(validator.place_validator(300)).to eql(false)
     end
+
+    it 'returns false if string in empty' do
+      expect(validator.place_validator(''.to_i)).to eql(false)
+    end
   end
 
   context '#empty_validator' do
