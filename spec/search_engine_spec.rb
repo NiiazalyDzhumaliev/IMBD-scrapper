@@ -29,5 +29,9 @@ describe SearchEngine do
     it 'returns the place of the movie' do
       expect(search_engine.place_search('The Shawshank Redemption')).to eql(1)
     end
+
+    it 'returns an error message if a title out of the list' do
+      expect(search_engine.place_search('Deadpool')).to eql('I can not find the movie.')
+    end
   end
 end
