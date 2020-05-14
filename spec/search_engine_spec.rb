@@ -19,6 +19,10 @@ describe SearchEngine do
     it 'returns the title of the movie' do
       expect(search_engine.title_search(2)).to eql('The Godfather')
     end
+
+    it 'returns an empty string if the place of 250' do
+      expect(search_engine.title_search(251)).to eql('')
+    end
   end
 
   context '#place_search' do
