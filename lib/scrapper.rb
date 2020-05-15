@@ -8,6 +8,8 @@ class Scrapper
     parsed_page.css('td.titleColumn')
   end
 
+  public
+
   def hash_creator
     movies_with_places = []
     place_count = 0
